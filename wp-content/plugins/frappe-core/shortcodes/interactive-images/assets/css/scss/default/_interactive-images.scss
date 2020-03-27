@@ -1,0 +1,198 @@
+.eltdf-interactive-images {
+    .eltdf-interactive-images-outer {
+        position: relative;
+        @media only screen and ( min-width: 1025px) {
+            @include eltdfTableLayout();
+        }
+    }
+
+    .eltdf-interactive-images-main {
+
+        position: relative;
+
+        @media only screen and ( min-width: 1025px) {
+             @include eltdfTableCellLayout();
+             width: 64%;
+        }
+    }
+
+    @media only screen and ( min-width: 1025px) {
+        
+        .eltdf-ii-text-holder {
+           @include eltdfTableCellLayout();
+            width: 36%;
+            vertical-align: top;
+            padding-top: 0;
+	
+	        .eltdf-ii-text {
+		        margin: 18px 0 39px;
+	        }
+        }
+
+        .eltdf-title-content-holder {
+               @include eltdfTableLayout();
+               height: auto;
+               
+               .eltdf-title-text-holder {
+                  @include eltdfTableCellLayout();
+                  width: 100%;
+                  vertical-align: middle;
+                  height: auto;
+               }
+               .eltdf-title-image {
+                  @include eltdfTableCellLayout();
+                  width: 22%;
+                  vertical-align: middle;
+                  height: auto;
+               }
+            
+
+            .eltdf-ii-text {
+                margin: 25px 0 38px;
+            }
+        }
+    }
+
+    .eltdf-ii-title {
+        margin: 0;
+    }
+
+    .eltdf-ii-subtitle {
+        margin: 5px 0 0;
+    }
+    
+    .eltdf-ii-text {
+        @include ipad-landscape {
+            margin: 18px 0 30px;
+        }
+    }
+
+    .eltdf-interactive-images-button {
+        padding: 14px 45px;
+    }
+
+    .eltdf-interactive-images-link {
+        .eltdf-interactive-images-main {
+            img {
+                box-shadow: 1px 2px 27px 0px rgba(0, 0, 0, 0.06);
+                @include eltdfTransition(box-shadow .4s ease-in);
+            }
+        }
+
+        &:hover {
+            .eltdf-interactive-images-main {
+                img {
+                    box-shadow: 1px 2px 27px 0px rgba(0, 0, 0, 0.18);
+                }
+            }
+        }
+    }
+
+    .eltdf-interactive-images-middle {
+        img {
+            box-shadow: 9px 8px 30px 0px rgba(0, 0, 0, 0.11);
+            border-radius: 36px;
+            box-sizing: border-box;
+        }
+    }
+
+    /*main image left position*/
+
+    &.eltdf-interactive-images-midleft {
+        text-align: left;
+
+        .eltdf-ii-text-holder {
+            @media only screen and ( min-width: 1025px) {
+                 padding-left: 60px;
+                 box-sizing: border-box;
+            }
+        }
+        .eltdf-interactive-images-middle {
+            position: absolute;
+            right: -14%;
+            bottom: -10%;
+        }
+    }
+
+    /*main image right position*/
+
+    &.eltdf-interactive-images-midright {
+        @media only screen and ( min-width: 1025px) {
+            text-align: right;
+        }
+        .eltdf-ii-text-holder {
+            @media only screen and ( min-width: 1025px) {
+                 padding-right: 60px;
+                 box-sizing: border-box;
+            }
+        }
+        .eltdf-interactive-images-middle {
+            position: absolute;
+            left: -14%;
+            bottom: -10%;
+        }
+    }
+
+    /*responsive strats here*/
+
+    @media only screen and (min-width:1025px) and (max-width: 1440px)  {
+        
+        .eltdf-interactive-images-main {
+           width: 55%;
+        }
+
+        .eltdf-ii-text-holder {
+            width: 45%;
+        }
+
+        &.eltdf-interactive-images-midleft {
+            .eltdf-interactive-images-middle {
+               right: -6%;
+               bottom: -2%;
+               width: 30%;
+            }
+        }
+
+        &.eltdf-interactive-images-midright {
+            .eltdf-interactive-images-middle {
+                left: -6%;
+                bottom: -2%;
+                width: 30%;
+            }
+        }
+    }
+
+    @include ipad-landscape {
+
+        .eltdf-ii-text-holder {
+            margin: 50px 0;
+        }
+
+        .eltdf-title-image {
+            display: none;
+        }
+
+        &.eltdf-interactive-images-midleft {
+            .eltdf-interactive-images-middle {
+                right: -2%;
+                width: 30%;
+            }
+        }
+
+        &.eltdf-interactive-images-midright {
+            .eltdf-interactive-images-middle {
+                left: -2%;
+                width: 30%;
+            }
+        }
+    }
+
+    @include phone-portrait {
+        .eltdf-interactive-images-middle {
+            display: none;
+        }
+    }
+
+    /*responsive ends here*/
+
+}

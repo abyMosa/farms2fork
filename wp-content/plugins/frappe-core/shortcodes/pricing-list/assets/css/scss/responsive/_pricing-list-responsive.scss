@@ -1,0 +1,94 @@
+@include phone-landscape {
+
+	.eltdf-pricing-list {
+
+		.eltdf-pl-title-holder {
+
+			.eltdf-pl-title-image {
+				display: none;
+			}
+
+			.eltdf-pl-title {
+				text-align: center;
+			}
+		}
+
+		.eltdf-pricing-list-item-link {
+			margin: 0 0 25px;
+		}
+
+		.eltdf-pricing-list-item {
+			margin: 0 0 35px;
+			text-align: center;
+
+			&:last-child {
+				margin: 0;
+			}
+
+			&:last-child {
+				margin: 0;
+			}
+
+			.eltdf-pli-image-holder {
+				margin: 0 auto 15px auto;
+			}
+
+			&.eltdf-pli-with-image {
+
+				.eltdf-pli-content {
+					width: 100%;
+					padding: 10px 0 15px;
+
+					.eltdf-pli-title {
+
+						.eltdf-pli-active {
+							top: 0;
+							right: auto;
+							left: 50%;
+							@include eltdfTransform(translateY(-100%) translateX(-50%));
+						}
+					}
+				}
+			}
+
+			.eltdf-pli-content {
+				padding: 15px 0;
+
+				.eltdf-pli-title-holder {
+					white-space: normal;
+					width: 100%;
+
+
+					.eltdf-pli-title {
+						text-align: center;
+					}
+
+					.eltdf-pli-active {
+						position: relative;
+						top: 50%;
+						left: 0;
+						right: -100px;
+						@include eltdfTransform(translateY(-50%));
+					}
+
+					.eltdf-pli-dots,
+					.eltdf-pli-line {
+						display: none;
+					}
+
+					.eltdf-pli-price-holder {
+						display: block;
+						width: 100%;
+						margin: 20px 0;
+						padding: 0;
+						text-align: center;
+					}
+				}
+
+				.eltdf-pli-bottom-content {
+					display: none;
+				}
+			}
+		}
+	}
+}

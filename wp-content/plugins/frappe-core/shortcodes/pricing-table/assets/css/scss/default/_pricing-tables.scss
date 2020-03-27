@@ -1,0 +1,119 @@
+/* ==========================================================================
+   Pricing Tables shortcode style - begin
+   ========================================================================== */
+
+.eltdf-pricing-tables {
+    @include eltdfRelativeHolderLayout();
+    clear: both;
+	
+	.eltdf-pt-wrapper {
+        position: relative;
+    }
+	
+	$pricing_table_columns: ('eltdf-two-columns', 'eltdf-three-columns', 'eltdf-four-columns', 'eltdf-five-columns');
+    @for $i from 0 to length($pricing_table_columns) {
+        &.#{nth($pricing_table_columns, $i+1)} {
+            $column_width: 100%/($i+2);
+	
+	        .eltdf-price-table {
+                width: $column_width;
+            }
+        }
+    }
+}
+
+.eltdf-price-table {
+    position: relative;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	float: left;
+    box-sizing: border-box;
+    color: #fff;
+
+    .eltdf-pt-inner {
+        @include eltdfRelativeHolderLayout();
+        background-color: $default-heading-color;
+        border-radius: 5px;
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                margin: 0;
+                padding: 5px 30px;
+                text-align: center;
+
+                &.eltdf-pt-title-holder {
+                    position: relative;
+                    color: #fff;
+                    font-family: $default-heading-font;
+                    font-size: 20px;
+                    line-height: 25px;
+                    font-weight: 500;
+	                letter-spacing: -0.01em;
+                    border-bottom: 2px dotted #fff;
+	                
+                    .eltdf-pt-title {
+                        display: block;
+                        box-sizing: border-box;
+                        padding: 22px 0 16px;
+                    }
+                }
+
+                &.eltdf-pt-prices {
+                    position: relative;
+					padding: 27px 15px 0;
+                    font-family: $default-heading-font;
+	                
+                    .eltdf-pt-value {
+                        position: relative;
+                        vertical-align: super;
+                        bottom: -1px;
+                        right: 3px;
+                        font-size: 20px;
+                        line-height: 1em;
+                        font-weight: 500;
+                        color: #fff;
+                    }
+
+                    .eltdf-pt-price {
+                        position: relative;
+                        display: inline-block;
+                        vertical-align: middle;
+	                    left: -5px;
+                        font-size: 50px;
+                        line-height: 1em;
+                        font-weight: 500;
+                        color: #fff;
+                    }
+
+                    .eltdf-pt-mark {
+                        position: relative;
+                        display: block;
+	                    margin: 1px 0 0;
+                        color: #fff;
+                    }
+                }
+
+                &.eltdf-pt-content {
+	                padding: 13px 15px;
+                    font-weight: 400;
+                }
+
+                &.eltdf-pt-button {
+                    padding: 20px 15px 50px;
+
+                    .eltdf-btn {
+                        padding: 14px 47px;
+                    }
+                }
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Pricing Tables shortcode style - end
+   ========================================================================== */

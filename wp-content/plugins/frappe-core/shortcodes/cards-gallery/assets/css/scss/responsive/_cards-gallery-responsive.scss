@@ -1,0 +1,73 @@
+/* ==========================================================================
+   Cards Gallery shortcode responsive style - begin
+   ========================================================================== */
+
+@include ipad-portrait {
+	
+    .eltdf-cards-gallery {
+	    
+	    .eltdf-cg-fake-card {
+	        @include eltdfTransform(scale(.8));
+	    }
+
+    	&.eltdf-cg-shuffled-left .eltdf-cg-card {
+	        @include eltdfTransform(scale(.8));
+
+    	    &.eltdf-out {
+    	        @include eltdfTransform(translateX(-100%));
+    	    }
+
+    	    &:nth-last-child(6) {
+    	        @include eltdfTransform(scale(.3) translateX(84%));
+    	    }
+
+    	    &:nth-last-child(5) {
+    	        @include eltdfTransform(scale(.4) translateX(60%));
+    	    }
+
+    	    &:nth-last-child(4) {
+    	        @include eltdfTransform(scale(.5) translateX(39%));
+    	    }
+
+    	    &:nth-last-child(3) {
+    	        @include eltdfTransform(scale(.6) translateX(25%));
+    	    }
+
+    	    &:nth-last-child(2) {
+    	        @include eltdfTransform(scale(.7) translateX(11.2%));
+    	    }
+    	}
+
+    	&.eltdf-cg-shuffled-right .eltdf-cg-card {
+	        @include eltdfTransform(scale(.8));
+
+    	    &.eltdf-out {
+    	        @include eltdfTransform(translateX(100%));
+    	    }
+
+    	    &:nth-last-child(6) {
+    	        @include eltdfTransform(scale(.3) translateX(-84%));
+    	    }
+
+    	    &:nth-last-child(5) {
+    	        @include eltdfTransform(scale(.4) translateX(-60%));
+    	    }
+
+    	    &:nth-last-child(4) {
+    	        @include eltdfTransform(scale(.5) translateX(-39%));
+    	    }
+
+    	    &:nth-last-child(3) {
+    	        @include eltdfTransform(scale(.6) translateX(-25%));
+    	    }
+
+    	    &:nth-last-child(2) {
+    	        @include eltdfTransform(scale(.7) translateX(-11.2%));
+    	    }
+    	}
+    }
+}
+
+/* ==========================================================================
+   Cards Gallery shortcode responsive style - end
+   ========================================================================== */

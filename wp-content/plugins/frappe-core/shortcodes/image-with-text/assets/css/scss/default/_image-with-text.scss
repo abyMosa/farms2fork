@@ -1,0 +1,168 @@
+/* ==========================================================================
+   Image With Text shortcode style - begin
+   ========================================================================== */
+
+.eltdf-image-with-text-holder {
+    @include eltdfRelativeHolderLayout();
+	
+	&.eltdf-has-shadow {
+		
+		.eltdf-iwt-image {
+			box-shadow: $default-box-shadow;
+		}
+	}
+	
+	&.eltdf-animated-section {
+		
+		.eltdf-iwt-image {
+			img {
+				opacity: 0;
+				@include eltdfTransform(translateY(50px) rotate(90deg));
+				@include eltdfTransitionTransform(.8s ease, opacity .3s ease);
+			}
+ 		}
+		
+		.eltdf-iwt-text-holder {
+			opacity: 0;
+			@include eltdfTransform(translateY(20px));
+			@include eltdfTransitionTransform(.4s $default-easing .3s, opacity .3s ease .3s);
+		}
+		
+		&.eltdf-iwt-appear {
+			.eltdf-iwt-image {
+				img {
+					opacity: 1;
+					@include eltdfTransform(translateY(0) rotate(0));
+				}
+			}
+			
+			.eltdf-iwt-text-holder {
+				opacity: 1;
+				@include eltdfTransform(translateY(0));
+			}
+		}
+	}
+	
+	.eltdf-iwt-image {
+		@include eltdfRelativeHolderLayout();
+		
+		a, img {
+			position: relative;
+			display: block;
+			margin: 0 auto;
+		}
+	}
+	
+	.eltdf-iwt-text-holder {
+		@include eltdfRelativeHolderLayout();
+		text-align: center;
+	}
+	
+	/***** Lightbox Behavior Style - begin *****/
+	
+	&.eltdf-image-behavior-lightbox {
+		
+		.eltdf-iwt-image {
+			
+			a {
+				@include eltdfImageOverlayHoverStyle();
+			}
+		}
+	}
+	
+	/***** Lightbox Behavior Style - end *****/
+	
+	/***** Zoom Behavior Style - begin *****/
+	
+	&.eltdf-image-behavior-zoom {
+		
+		.eltdf-iwt-image {
+			overflow: hidden;
+			
+			.touch & {
+				cursor: pointer;
+			}
+			
+			&:hover {
+				
+				img {
+					@include eltdfTransform(scale(1.04));
+				}
+			}
+			
+			img {
+				@include eltdfTransform(scale(1));
+				@include eltdfTransitionTransform(.3s ease-in-out);
+			}
+		}
+	}
+	
+	/***** Zoom Behavior Style - end *****/
+	
+	/***** Grayscale Behavior Style - begin *****/
+	
+	&.eltdf-image-behavior-grayscale {
+		
+		.eltdf-iwt-image {
+			overflow: hidden;
+			
+			.touch & {
+				cursor: pointer;
+			}
+			
+			&:hover {
+				
+				img {
+					-webkit-filter: grayscale(0);
+					filter: none;
+				}
+			}
+			
+			img {
+				filter: url('img/desaturate.svg#grayscale');
+				-webkit-filter: grayscale(100%);
+				-moz-filter: grayscale(100%);
+				filter: gray;
+				filter: grayscale(100%);
+				@include eltdfTransition(all .3s ease-in-out);
+			}
+		}
+	}
+	
+	/***** Grayscale Behavior Style - end *****/
+
+	&.eltdf-bottom-image {
+
+		.eltdf-iwt-title {
+		    margin: 25px 0 0;
+		}
+		
+		.eltdf-iwt-text {
+			width: 70%;
+			margin: 18px auto 0;
+		}
+
+		.eltdf-img-with-text-button {
+			margin: 30px 0 25px;
+		}
+	}
+
+	&.eltdf-top-image {
+
+		.eltdf-iwt-title {
+		    margin: 25px 0 0;
+		}
+		
+		.eltdf-iwt-text {
+			width: 70%;
+			margin: 18px auto 0;
+		}
+
+		.eltdf-img-with-text-button {
+			margin: 30px 0 0;
+		}
+	}
+}
+/* ==========================================================================
+   Image With Text shortcode style - end
+   ========================================================================== */
