@@ -1,0 +1,1 @@
+<?php do_action( 'frappe_elated_get_footer_template' );

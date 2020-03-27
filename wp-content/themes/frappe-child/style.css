@@ -1,0 +1,15 @@
+/*
+Theme Name: Frappe Child
+Theme URI: http://frappe.elated-themes.com
+Description: A child theme of Frappe Theme
+Author: Elated Themes
+Author URI: http://themeforest.net/user/elated-themes
+Version: 1.0.0
+Text Domain: frappe
+Template: frappe
+*/
+
+
+.eltdf-logo-wrapper a img{
+    height: 50px!important;
+}
