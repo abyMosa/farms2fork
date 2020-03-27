@@ -1,7 +1,7 @@
 
 # ignore these plugins
 wp-content/plugins/hello.php
-
+.htaccess
 wp-content/uploads
 wp-config.php
 # ignore node dependency directories
